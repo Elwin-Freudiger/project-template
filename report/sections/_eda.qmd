@@ -111,7 +111,7 @@ fig, ax = plt.subplots(figsize=(6, 4))
 
 # Box plot
 bp = ax.boxplot(dummy_performance["performance"], vert=True, patch_artist=True,
-                labels=["Performance"],
+                label=["Performance"],
                 boxprops=dict(facecolor='lightblue', edgecolor='black', linewidth=1.5),
                 medianprops=dict(color='red', linewidth=2),
                 whiskerprops=dict(color='black', linewidth=1.5),

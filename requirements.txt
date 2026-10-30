@@ -21,6 +21,7 @@ geopandas>=1.0.1
 jupyter>=1.0.0      # Classic Jupyter Notebook interface
 jupyterlab>=4.0.0   # Modern JupyterLab interface
 ipython>=8.0.0      # IPython kernel
+pyyaml
 
 # Additional utilities
 openpyxl>=3.1.0  # For reading Excel files

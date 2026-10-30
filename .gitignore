@@ -1,1 +1,6 @@
 /.quarto/
+
+.venv
+.conda
+
+.DS_store

@@ -23,6 +23,7 @@ We use [Quarto](https://quarto.org/) for the template, which starts from a singl
 1. **Install Anaconda** (if not already installed)
    - Download from [anaconda.com](https://www.anaconda.com/download)
    - Follow installation instructions for your OS
+   - Using *venv* is also possible
 
 2. **Install Quarto**
    - Download from [quarto.org](https://quarto.org/docs/get-started/)
@@ -39,11 +40,11 @@ We use [Quarto](https://quarto.org/) for the template, which starts from a singl
    ```bash
    # Clone your repository
    git clone <your-repo-url>
-   cd dsas_template
+   cd project-template
 
    # Create conda environment with required packages
-   conda create -n dsas_project python=3.11
-   conda activate dsas_project
+   conda create -n dsmfm_project python=3.14 
+   conda activate dsmfm_project
    pip install -r requirements.txt
    ```
 
