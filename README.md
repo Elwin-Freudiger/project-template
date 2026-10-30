@@ -68,7 +68,7 @@ Make sure the following software is installed:
 
    ```bash
    # Create a conda environment
-   conda create -n dsmfm_project python=3.14
+   conda create -n dsmfm_project
 
    # Activate the environment
    conda activate dsmfm_project
@@ -88,17 +88,16 @@ Make sure the following software is installed:
    quarto render report/report.qmd
    ```
 
-#### Option B: Using Anaconda Navigator
+#### Alternative: Render with Anaconda Navigator
 
 1. **Open Anaconda Navigator**
    - Launch Anaconda Navigator from your applications.
 
 2. **Create the Python environment**
    - Go to the **Environments** tab.
-   - Use **Create** to make a new environment named `dsmfm_project`, or open a terminal from the `base` environment and run:
-
+   - Click **Create**, name the environment `dsmfm_project`, and select your Python version. Alternatively, open a terminal in the base environment and run the following command:
    ```bash
-   conda create -n dsmfm_project python=3.14
+   conda create -n dsmfm_project python
    ```
 
 3. **Install the dependencies**
@@ -176,16 +175,16 @@ conda env list
 - Set random seeds for reproducibility: `np.random.seed(42)`
 - Use version control (Git) and commit regularly
 - Write clear commit messages explaining what changed
-- Update `.gitignore` to exclude `.venv/`, `__pycache__/` or `.DS_store`
+- Update `.gitignore` to exclude `.venv/`, `__pycache__/` or `.DS_Store`
 - Document your code thoroughly
-- Never commit credentials or large data files
+- Never commit passwords, API keys, or other credentials. Avoid committing large datasets unless explicitly required.
 
 ## Reproducibility Checklist
 
 Your project is reproducible if anyone can:
 
 1. Clone the repository
-2. Create conda environment: `conda create -n dsmfm_project python=3.14`
+2. Create conda environment: `conda create -n dsmfm_project python`
 3. Activate environment: `conda activate dsmfm_project`
 4. Install dependencies: `pip install -r requirements.txt`
 5. Render report: `quarto render report/report.qmd`
