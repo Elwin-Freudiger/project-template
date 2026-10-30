@@ -34,11 +34,9 @@ If you have a GitHub account and Git installed:
    ```
 4. Open the downloaded project folder.
 
-**Tip:** If you're new to Git, we recommend installing [GitHub Desktop](https://desktop.github.com/) to clone your repository and manage changes without using the terminal.
+We recommend installing [GitHub Desktop](https://desktop.github.com/) to clone your repository and manage changes without using the terminal.
 
-Using GitHub allows you to save your progress online and collaborate with your teammates.
-
-**Option B: Download as ZIP (simplest)**
+**Option B: Download as ZIP**
 
 If you don't want to use GitHub:
 
@@ -47,7 +45,6 @@ If you don't want to use GitHub:
 3. Extract the ZIP file to a folder on your computer.
 4. Open the extracted folder.
 
-You now have a local copy of the project and can start working!
 
 ### 2. Install Required Software
 
@@ -87,11 +84,6 @@ Make sure the following software is installed:
 
 5. **Render your report**
 
-   - Open `report/report.qmd` in VS Code.
-   - Click the **Render** button to generate and preview your report.
-
-   Alternatively, from the project root folder, run:
-
    ```bash
    quarto render report/report.qmd
    ```
@@ -103,7 +95,7 @@ Make sure the following software is installed:
 
 2. **Create the Python environment**
    - Go to the **Environments** tab.
-   - Create a new environment named `dsmfm_project` with Python, or open a terminal from the `base` environment and run:
+   - Use **Create** to make a new environment named `dsmfm_project`, or open a terminal from the `base` environment and run:
 
    ```bash
    conda create -n dsmfm_project python=3.14
@@ -167,7 +159,7 @@ Conda manages Python environments to avoid package conflicts.
 **Basic commands:**
 ```bash
 # Activate your project environment
-conda activate dsas_project
+conda activate dsmfm_project
 
 # Install additional packages
 pip install package_name
@@ -184,7 +176,7 @@ conda env list
 - Set random seeds for reproducibility: `np.random.seed(42)`
 - Use version control (Git) and commit regularly
 - Write clear commit messages explaining what changed
-- Update `.gitignore` to exclude `.venv/` or `__pycache__/`
+- Update `.gitignore` to exclude `.venv/`, `__pycache__/` or `.DS_store`
 - Document your code thoroughly
 - Never commit credentials or large data files
 
@@ -193,8 +185,8 @@ conda env list
 Your project is reproducible if anyone can:
 
 1. Clone the repository
-2. Create conda environment: `conda create -n dsas_project python=3.11`
-3. Activate environment: `conda activate dsas_project`
+2. Create conda environment: `conda create -n dsmfm_project python=3.14`
+3. Activate environment: `conda activate dsmfm_project`
 4. Install dependencies: `pip install -r requirements.txt`
 5. Render report: `quarto render report/report.qmd`
 

@@ -58,6 +58,7 @@ execute:
 ---
 
 <!-- These are your sections, sections/_quarto_guide.qmd should be deleted -->
+
 {{< include sections/_quarto_guide.qmd >}}
 {{< include sections/_introduction.qmd >}}
 {{< include sections/_data.qmd >}}
