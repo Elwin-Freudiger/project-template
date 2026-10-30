@@ -18,46 +18,127 @@ We use [Quarto](https://quarto.org/) for the template, which starts from a singl
 
 ## Quick Start
 
-### Installation
+### 1. Get the Project Template
 
-1. **Install Anaconda** (if not already installed)
+There are two ways to get started:
+
+**Option A: Use GitHub (recommended for collaboration)**
+
+If you have a GitHub account and Git installed:
+
+1. Click **Use this template → Create a new repository**.
+2. Give your repository a name and click **Create repository**.
+3. Clone your new repository to your computer:
+   ```bash
+   git clone <your-repo-url>
+   ```
+4. Open the downloaded project folder.
+
+**Tip:** If you're new to Git, we recommend installing [GitHub Desktop](https://desktop.github.com/) to clone your repository and manage changes without using the terminal.
+
+Using GitHub allows you to save your progress online and collaborate with your teammates.
+
+**Option B: Download as ZIP (simplest)**
+
+If you don't want to use GitHub:
+
+1. Click the green **Code** button on this repository.
+2. Select **Download ZIP**.
+3. Extract the ZIP file to a folder on your computer.
+4. Open the extracted folder.
+
+You now have a local copy of the project and can start working!
+
+### 2. Install Required Software
+
+Make sure the following software is installed:
+
+1. **Anaconda** (if not already installed)
    - Download from [anaconda.com](https://www.anaconda.com/download)
    - Follow installation instructions for your OS
-   - Using *venv* is also possible
+   - Using *venv* instead of Conda is also possible
 
 2. **Install Quarto**
    - Download from [quarto.org](https://quarto.org/docs/get-started/)
    - Verify: `quarto --version`
    - **Troubleshooting:** Run `quarto check` to diagnose installation issues
 
-3. **Install TinyTeX** (required for PDF output)
+3. **Set up the Python environment**
+
+   Open a new terminal in VS Code (**Terminal → New Terminal**).
+
+   Make sure you're in the project root folder (where `requirements.txt` is located), then run:
+
+   ```bash
+   # Create a conda environment
+   conda create -n dsmfm_project python=3.14
+
+   # Activate the environment
+   conda activate dsmfm_project
+
+   # Install required packages
+   python -m pip install -r requirements.txt
+   ```
+
+4. **Install TinyTeX** (only required for PDF output)
    ```bash
    quarto install tinytex
    ```
-   - See [Quarto PDF documentation](https://quarto.org/docs/output-formats/pdf-engine.html) for details
 
-4. **Set up project environment**
+5. **Render your report**
+
+   - Open `report/report.qmd` in VS Code.
+   - Click the **Render** button to generate and preview your report.
+
+   Alternatively, from the project root folder, run:
+
    ```bash
-   # Clone your repository
-   git clone <your-repo-url>
-   cd project-template
-
-   # Create conda environment with required packages
-   conda create -n dsmfm_project python=3.14 
-   conda activate dsmfm_project
-   pip install -r requirements.txt
+   quarto render report/report.qmd
    ```
 
-   **Setting up conda with Quarto:** See [this guide](https://thedatasavvycorner.com/blogs/08-quarto-conda-env) for detailed instructions on configuring Quarto to work with your conda environment.
+#### Option B: Using Anaconda Navigator
 
-### Render the Report
+1. **Open Anaconda Navigator**
+   - Launch Anaconda Navigator from your applications.
 
-```bash
-cd report
-quarto render report.qmd
-```
+2. **Create the Python environment**
+   - Go to the **Environments** tab.
+   - Create a new environment named `dsmfm_project` with Python, or open a terminal from the `base` environment and run:
 
-This generates HTML/PDF/DOCX files in the same directory.
+   ```bash
+   conda create -n dsmfm_project python=3.14
+   ```
+
+3. **Install the dependencies**
+   - Select your new `dsmfm_project` environment.
+   - Open a terminal for this environment.
+   - Navigate to your downloaded project folder:
+
+   ```bash
+   cd <path-to-your-project-folder>
+   ```
+
+   - Install the required packages:
+
+   ```bash
+   python -m pip install -r requirements.txt
+   ```
+
+4. **Install TinyTeX** (required for PDF output)
+
+   ```bash
+   quarto install tinytex
+   ```
+
+5. **Render your report**
+
+   From your project root folder, run:
+
+   ```bash
+   quarto render report/report.qmd
+   ```
+
+   This generates the report in the formats specified in `report.qmd` (HTML, PDF, and/or DOCX).
 
 ## Project Structure
 
